@@ -1,5 +1,6 @@
 package ArraysInDescendingOrder;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main
@@ -39,12 +40,19 @@ public class Main
 
     public static int[] intSort(int[] array)
     {
-        int[] sortedArray = new int[array.length];
+       // int[] sortedArray = new int[array.length];
+       //  for(int i = 0; i< array.length;i++)
+       // {
+       //     sortedArray[i] = array[i]; //the array values will be stored in sortedArray
+       // }
 
-        for(int i = 0; i< array.length;i++)
-        {
-            sortedArray[i] = array[i]; //the array values will be stored in sortedArray
-        }
+        /*
+            an alternative way to copy the past array to the sorted array
+            is below. This helps to reduce code and be more efficient.
+         */
+
+        int[] sortedArray = Arrays.copyOf(array, array.length);
+
         boolean flag = true; //initially set to true
         int temp;
 
